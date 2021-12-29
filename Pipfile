@@ -8,6 +8,7 @@ psycopg2 = "*"
 sqlalchemy = "*"
 python-jose = {extras = ["cryptography"], version = "*"}
 passlib = {extras = ["bcrypt"], version = "*"}
+fastapi = {extras = ["all"], version = "*"}
 
 [dev-packages]
 
