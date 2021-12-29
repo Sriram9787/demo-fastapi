@@ -2,9 +2,10 @@ from fastapi.applications import FastAPI
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
+from .config import settings
 
 
-SQL_DATABASE_URL = "postgresql://postgres:9787565407Ss#@localhost/pro1"
+SQL_DATABASE_URL = settings.database_url
 
 ENGINE = create_engine(SQL_DATABASE_URL)
 
