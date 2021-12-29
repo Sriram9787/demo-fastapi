@@ -13,6 +13,8 @@ origins = [
     "http://localhost:8080",
 ]
 
+
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
@@ -25,3 +27,7 @@ app.add_middleware(
 
 app.include_router(post.router)
 app.include_router(user.router)
+
+@app.get('/')
+def home():
+    return({"data":"hi this is home page"})
